@@ -1,0 +1,48 @@
+{
+  "colors": {
+    "pageBg": "bg-purple-50",
+    "sectionBg": "bg-purple-50",
+    "sectionAltBg": "bg-purple-100/40",
+    "cardBg": "bg-white",
+
+    "headingPrimary": "text-purple-900",
+    "headingSecondary": "text-purple-800",
+    "bodyPrimary": "text-purple-950",
+    "bodySecondary": "text-purple-950",
+    "bodyMuted": "text-purple-500",
+
+    "buttonPrimaryBg": "bg-purple-600",
+    "buttonPrimaryHover": "hover:bg-purple-500",
+    "buttonPrimaryText": "text-white",
+
+    "buttonSecondaryBorder": "border-purple-400",
+    "buttonSecondaryText": "text-purple-800",
+    "buttonSecondaryHover": "hover:bg-purple-200",
+
+    "borderSoft": "border-purple-200",
+    "shadowSoft": "shadow-md",
+    "cardHoverShadow": "hover:shadow-xl",
+
+    "heroGradientFrom": "from-purple-300",
+    "heroGradientVia": "via-purple-50",
+    "heroGradientTo": "to-purple-300",
+
+    "accentGlow": "bg-purple-300/30",
+
+    "navBg": "bg-purple-100/80",
+    "navIcon": "bg-purple-900",
+    "navBorder": "border-purple-200",
+    "navText": "text-purple-900",
+    "navHoverBg": "hover:bg-purple-200",
+    "navHoverScale": "",
+    "navButtonBg": "bg-purple-600",
+    "navButtonHover": "hover:bg-purple-500",
+    "navButtonText": "text-white",
+
+    "footerBg": "bg-purple-200/60",
+    "footerTextPrimary": "text-purple-900",
+    "footerTextSecondary": "text-purple-800",
+    "footerTextMuted": "text-purple-600",
+    "footerBorder": "border-purple-300"
+  }
+}

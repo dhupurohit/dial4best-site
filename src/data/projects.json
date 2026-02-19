@@ -1,0 +1,14 @@
+[
+  {
+    "id": "tool-1",
+    "title": "Minimal Tool One",
+    "description": "A small experimental utility.",
+    "content": "Detailed description goes here."
+  },
+  {
+    "id": "tool-2",
+    "title": "Experiment Two",
+    "description": "Frontend animation experiment.",
+    "content": "Detailed description goes here."
+  }
+]

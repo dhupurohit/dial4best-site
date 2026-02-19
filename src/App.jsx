@@ -1,14 +1,23 @@
-import { useState } from "react";
-import Home from "./components/Home";
+import { ThemeProvider } from "./context/ThemeContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import ProjectDetail from "./pages/ProjectDetail";
 import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
-
   return (
-    <>
-      {/* <h1 class="text-3xl font-bold underline">Hello world!</h1> */}
-      <Home />
-    </>
+    <ThemeProvider>
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
