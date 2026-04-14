@@ -1,19 +1,21 @@
 import Hero from "../components/Hero";
-import FeaturedHeartDrop from "../components/FeaturedHeartDrop";
+import LearnWithMe from "../components/LearnWithMe";
+import HowITeach from "../components/HowITeach";
 import AboutBrand from "../components/AboutBrand";
-import ProjectsPreview from "../components/ProjectsPreview";
 import Philosophy from "../components/Philosophy";
+import DoubtSection from "../components/DoubtSection";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main className="font-sans bg-purple-50">
+    <main className="font-sans">
       <Hero />
-      <FeaturedHeartDrop />
+      <LearnWithMe />
+      <HowITeach />
       <AboutBrand />
-      <ProjectsPreview />
       <Philosophy />
+      <DoubtSection />
       <Contact />
       <Footer />
     </main>

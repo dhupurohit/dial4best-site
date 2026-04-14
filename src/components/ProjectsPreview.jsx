@@ -8,7 +8,7 @@ export default function ProjectsPreview() {
   const theme = useTheme();
 
   return (
-    <section id="projects" className={`${theme.colors.sectionAltBg} py-24 px-6`}>
+    <section id="projects" className={`${theme.colors.sectionAltBg} py-20 px-6`}>
       <FadeIn>
         <div className="max-w-4xl mx-auto">
 

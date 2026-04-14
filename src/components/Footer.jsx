@@ -1,71 +1,58 @@
 import { useTheme } from "../context/ThemeContext";
-import site from "../data/site.json";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   const theme = useTheme();
 
   return (
     <footer
-      className={`${theme.colors.footerBg} border-t ${theme.colors.footerBorder} py-16 px-6`}
+      className={`${theme.colors.sectionBg} border-t ${theme.colors.navBorder} py-16 px-6`}
     >
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-        {/* Left Column — Brand Closure */}
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+
+        {/* Left */}
         <div>
-          <h3
-            className={`text-2xl font-serif ${theme.colors.footerTextPrimary}`}
-          >
+          <h3 className={`font-semibold ${theme.colors.headingSecondary}`}>
             Built with intention.
           </h3>
 
-          <p className={`mt-4 ${theme.colors.footerTextSecondary}`}>
-            Creating thoughtful tools and meaningful digital experiences.
+          <p className={`mt-2 text-sm ${theme.colors.bodyMuted}`}>
+            A calm space to learn coding — slowly and clearly.
           </p>
-
-          {/* <p className={`mt-8 text-sm ${theme.colors.footerTextMuted}`}>
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
-          </p> */}
         </div>
 
-        {/* Right Column — Links */}
-        <div className="md:text-right space-y-4">
-          <a
-            href={site.links.heartdrop}
-            target="_blank"
-            rel="noreferrer"
-            className={`block ${theme.colors.footerTextSecondary} hover:underline`}
-          >
-            HeartDrop
+        {/* Right */}
+        <div className="flex flex-col gap-2 text-sm">
+
+          <a href="#learn" className={`${theme.colors.bodySecondary} hover:opacity-70 transition`}>
+            Learn
           </a>
 
-          <a
-            href={site.links.purohit}
-            target="_blank"
-            rel="noreferrer"
-            className={`block ${theme.colors.footerTextSecondary} hover:underline`}
-          >
-            Purohit Infotech
+          <a href="#about" className={`${theme.colors.bodySecondary} hover:opacity-70 transition`}>
+            About
           </a>
 
-          <a
-            href="/projects"
-            className={`block ${theme.colors.footerTextSecondary} hover:underline`}
-          >
-            Projects
-          </a>
-
-          <a
-            href={`mailto:${site.socials.email}`}
-            className={`block ${theme.colors.footerTextSecondary} hover:underline`}
-          >
+          <a href="#contact" className={`${theme.colors.bodySecondary} hover:opacity-70 transition`}>
             Contact
           </a>
+
+          <motion.a
+            href="https://purohitinfotech.com"
+            target="_blank"
+            rel="noreferrer"
+            whileHover={{ x: 2 }}
+            className={`${theme.colors.bodySecondary} hover:opacity-70 transition`}
+          >
+            Purohit Infotech
+          </motion.a>
+
         </div>
 
-        <div className="md:col-span-2 text-center">
-          <p className={`mt-2 text-sm ${theme.colors.footerTextMuted}`}>
-            © {new Date().getFullYear()} {site.name}. All rights reserved.
-          </p>
-        </div>
+      </div>
+
+      {/* Bottom */}
+      <div className="mt-10 text-center text-xs opacity-60">
+        © {new Date().getFullYear()} Dhruvita Purohit. All rights reserved.
       </div>
     </footer>
   );

@@ -8,7 +8,7 @@ export default function Projects() {
   const theme = useTheme();
 
   return (
-    <main className={`${theme.colors.pageBg} min-h-screen py-28 px-6`}>
+    <main className={`${theme.colors.pageBg} min-h-screen py-20 px-6`}>
       <FadeIn>
         <div className="max-w-4xl mx-auto">
 

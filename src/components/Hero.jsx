@@ -1,67 +1,45 @@
 import { useTheme } from "../context/ThemeContext";
-import site from "../data/site.json";
 import FadeIn from "./FadeIn";
-import { motion } from "framer-motion";
 
 export default function Hero() {
   const theme = useTheme();
 
   return (
     <section
-      className={`${theme.colors.pageBg} relative min-h-screen flex items-center justify-center px-6 overflow-hidden`}
+      className={`${theme.colors.pageBg} min-h-screen flex items-center justify-center px-6`}
     >
-      {/* Animated Gradient Background */}
-      <motion.div
-        className={`absolute inset-0 bg-gradient-to-br ${theme.colors.heroGradientFrom} ${theme.colors.heroGradientVia} ${theme.colors.heroGradientTo}`}
-        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-        transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        style={{ backgroundSize: "200% 200%" }}
-      />
-
-      {/* Soft Glow Blob */}
-      <motion.div
-        className={`absolute w-72 h-72 rounded-full ${theme.colors.accentGlow} blur-3xl`}
-        animate={{ y: [0, -30, 0] }}
-        transition={{ duration: 6, repeat: Infinity }}
-      />
-
       <FadeIn>
-        <div className="relative max-w-2xl text-center">
-          <h1
-            className={`text-4xl sm:text-5xl font-serif font-bold ${theme.colors.headingPrimary}`}
-          >
-            Hi, I’m {site.name.split(" ")[0]}.
+        <div className="max-w-2xl text-center">
+
+          <h1 className={`text-4xl sm:text-5xl font-serif ${theme.colors.headingPrimary}`}>
+            Hi, I’m Dhruvita (Dhruvaa).
           </h1>
 
-          <h2
-            className={`mt-4 text-2xl font-medium ${theme.colors.headingSecondary}`}
-          >
-            {site.tagline}
+          <h2 className={`mt-4 text-2xl ${theme.colors.headingSecondary}`}>
+            I teach coding slowly and clearly — step by step.
           </h2>
 
-          <p
-            className={`mt-6 text-lg leading-relaxed ${theme.colors.bodySecondary}`}
-          >
-            {site.heroSubtext}
+          <p className={`mt-6 text-lg leading-relaxed ${theme.colors.bodySecondary}`}>
+            So you can actually understand what you're learning,
+            not just follow along and feel lost.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={site.links.heartdrop}
-              target="_blank"
-              rel="noreferrer"
-              className={`px-6 py-3 rounded-xl ${theme.colors.buttonPrimaryBg} ${theme.colors.buttonPrimaryHover} ${theme.colors.buttonPrimaryText} transition`}
+              href="#learn"
+              className={`px-6 py-3 rounded-xl ${theme.colors.buttonPrimaryBg} ${theme.colors.buttonPrimaryHover} ${theme.colors.buttonPrimaryText}`}
             >
-              Create a HeartDrop
+              Start learning
             </a>
 
             <a
-              href="#projects"
-              className={`px-6 py-3 rounded-xl border ${theme.colors.buttonSecondaryBorder} ${theme.colors.buttonSecondaryText} ${theme.colors.buttonSecondaryHover} transition`}
+              href="#learn"
+              className={`px-6 py-3 rounded-xl border ${theme.colors.buttonSecondaryBorder} ${theme.colors.buttonSecondaryText} ${theme.colors.buttonSecondaryHover}`}
             >
-              Explore My Work
+              Watch a video
             </a>
           </div>
+
         </div>
       </FadeIn>
     </section>

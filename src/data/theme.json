@@ -1,7 +1,7 @@
 {
   "colors": {
     "pageBg": "bg-purple-50",
-    "sectionBg": "bg-purple-50",
+    "sectionBg": "bg-purple-100/80",
     "sectionAltBg": "bg-purple-100/40",
     "cardBg": "bg-white",
 
